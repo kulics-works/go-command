@@ -78,7 +78,7 @@ func (me *SSHClient) connect(do func(cli *ssh.Client) error) error {
 		},
 		Timeout: time.Second * DefaultTimeout,
 	}
-	client, err := ssh.Dial("tcp", fmt.Sprint("%s:%d", me.IP, me.Port), cfg)
+	client, err := ssh.Dial("tcp", fmt.Sprintf("%s:%d", me.IP, me.Port), cfg)
 	if err != nil {
 		return err
 	}
