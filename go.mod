@@ -1,4 +1,4 @@
-module github.com/kulics-works/go-command
+module command
 
 go 1.13
 
